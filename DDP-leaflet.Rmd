@@ -1,0 +1,24 @@
+---
+title: "Interactive Map with Leaflet"
+author: "Aaron Abraham Mathews"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Welcome to My Interactive Map Page!
+
+This web page was created as part of an assignment to demonstrate the use of Leaflet for creating interactive maps in R Markdown. Below is an example of an interactive map that I created.
+
+---
+
+### Interactive Map
+
+```{r, echo=FALSE}
+# Load required libraries
+library(leaflet)
+
+# Create a simple Leaflet map
+leaflet() %>%
+  addTiles() %>%
+  setView(lng = -93.85, lat = 37.45, zoom = 4) %>% 
+  addMarkers(lng = -93.85, lat = 37.45, popup = "Welcome to the Center of the U.S.!")
